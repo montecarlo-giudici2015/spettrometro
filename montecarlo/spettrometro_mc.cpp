@@ -4,10 +4,18 @@
 #include "lorentz.cpp"
 // Idealmente qui vorrei solo includere i vostri file, assicuratevi di avere già voi le librerie necessarie
 
+
 // serie di costanti usabili da chiunque
+
 const int N = 1000; // # di eventi da simulare
+
 const double smear = 0; // costante di smearing, da cambiare
 const double p_kick = 1e308; // impulso dato dal magnete, da cambiare
+
+const double z1 = 1;  // distanze dei rivelatori, da cambiare
+const double z2 = 2;
+const double z3 = 3;
+const double z4 = 4;
 
 void spettrometro_mc()  // lei fa tutta la magia
 {
@@ -70,8 +78,9 @@ void spettrometro_mc()  // lei fa tutta la magia
 	}
 	// a questo punto i vettori sono pieni, si passa alla scrittura su file
 	
-	// punto 7a
+	// punto 6a
 	// aprite un file, scriveteci dentro le cose, ci sono svariati modi di farlo, non sto a imporne uno
+	// do_some_magic_with_files_and_all_the_arrays(...);
 	
 	// stampa un messaggio che dice all'utonto che tutto è andato a buon fine
 	
