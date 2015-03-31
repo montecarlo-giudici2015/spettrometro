@@ -23,14 +23,14 @@ void theta_init()
 
 
 //Sorteggia un angolo theta da una distribuzione sferica (tale che cos(theta) sia uniforme)
-double theta()
+double genera_theta()
 {
   return acos(2*XI-1);
 }
 
 
 //Trasformazione th_cm -> th_lab: la funzione restituisce la tangente dell'angolo nel lab. Altre informazioni nel file fact_sheet.pdf
-double th1(double th_cm, double E_K)
+double genera_th1(double th_cm, double E_K)
 {
   const double gamma = E_K/m_K;
   const double beta = 1.-0.5*pow(m_K/E_K,2); //l'ordine successivo è -0.125*pow(m_K/E_K,4)
@@ -39,7 +39,7 @@ double th1(double th_cm, double E_K)
 
 
 //Idem per l'angolo \pi-theta_cm
-double th2(double th_cm, double E_K)
+double genera_th2(double th_cm, double E_K)
 {
   const double gamma = E_K/m_K;
   const double beta = 1.-0.5*pow(m_K/E_K,2); //l'ordine successivo è -0.125*pow(m_K/E_K,4)
@@ -48,7 +48,7 @@ double th2(double th_cm, double E_K)
 
 
 //Trasformazione pz1_cm -> pz1_lab. L'unità di misura è il Gev/c
-double p1(double th_cm, double E_K)
+double genera_p1(double th_cm, double E_K)
 {
   const double gamma = E_K/m_K;
   const double beta = 1.-0.5*pow(m_K/E_K,2); //l'ordine successivo è -0.125*pow(m_K/E_K,4)
@@ -57,7 +57,7 @@ double p1(double th_cm, double E_K)
 
 
 //Idem per il secondo pione
-double p2(double th_cm, double E_K)
+double genera_p2(double th_cm, double E_K)
 {
   const double gamma = E_K/m_K;
   const double beta = 1.-0.5*pow(m_K/E_K,2); //l'ordine successivo è -0.125*pow(m_K/E_K,4)
